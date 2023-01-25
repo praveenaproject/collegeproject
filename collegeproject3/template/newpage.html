@@ -1,0 +1,28 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:#CCFFCC">
+<center>
+<h1><b>ABC COLLEGE<br>
+
+Welcome {% if user.is_authenticated %}
+    {{user.username}}
+    {% else  %}
+    You are not authenticated
+    {% endif %}
+</b></h1>
+    </center>
+<div>
+    <center>
+
+        <button type="submit"><a href="{% url 'form' %}">Please click here</a></button><br>
+
+
+    </center>
+</div>
+</body>
+</html>

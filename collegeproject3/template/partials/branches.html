@@ -1,0 +1,6 @@
+<select  class="form-select" name="Branch_id">
+  <option selected>Choose Branch</option>
+{% for i in all_branches %}
+    <option value="{{i.id}}">{{i.bname}}</option>
+{% endfor %}
+</select>
